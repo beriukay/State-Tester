@@ -1,0 +1,23 @@
+This is a fairly simple program I wrote to learn how to use dictionaries with lists, while working my way through Learn Python The Hard Way, exercise 40.
+
+The program needs to be in the same directory as the data file, states.txt, for it to work properly, since the first thing it does is read the file to populate the respective lists.
+
+The menu is pretty straight forward. It asks you which specific body of information you want to test your knowledge on: 
+
+1. of States.
+2. of Capitals.
+3. of State Codes.
+
+Then it asks you how you would like to recite your knowledge: 
+
+1. In Random Order.
+2. Alphabetically By State.
+3. Go Back.
+
+The testing function, comparate, attempts to be forgiving towards some types of user input errors. Specifically, it ignores case when comparing strings, and strips off any leading or trailing spaces. This is done to avoid embarrassing errors on the program's behalf, like thinking "Rhode Island" is different from "Rhode island". Because if I were the user, I'd be pissed if that counted as wrong.
+
+This program took about a week of 2-hour blocks to write. Most time was spent staring at the existing code and repeating "I know I can say this better...", though the last day was by far the most active: 5 hours of typing, erasing, staring, and retyping. I was aiming for maximum extensibility, since I hear that is good practice, so I only ended up using magic numbers when iterating through the set (since the US seems to be at a stable equilibrium of number of states). That's why I had a near-fatal geekasm when I wrote/tested the code for states/in alphabetical order (and then random), and it worked beautifully for the state codes AND capitals for free!
+
+In future versions, I intend to tweak the menu to allow for a hints toggle, as well as allow for stricter/looser standards for incorrect guesses. That way a hardcore memorizer could be dumped back into the menu after a single wrong answer, and someone trying to learn could get at least 3 different kinds of hints: what the word starts with, and the other two pieces of information already linked to the word. I also currently keep track of number of correct and incorrect guesses, but haven't set up an exit display that tells the subject how well they did.
+
+
