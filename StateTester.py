@@ -42,8 +42,8 @@ def option(thing):                      #prompt to get a numeric input from user
             user = int(user)	        #make sure it is a number
         except ValueError:		        #if it isn't, it will loop around with a warning
             pass
-        except EOFError:
-            print("Empty user input value")
+        except EOFError as e:
+            print("Empty user input value: " + e)
         if not user: sys.exit('goodbye')#no input quits immediately
         elif 0 < user < len(thing) + 1: #return if user entered a valid option
             return user - 1             #this is the value we care about
